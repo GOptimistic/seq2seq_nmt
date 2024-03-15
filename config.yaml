@@ -61,20 +61,26 @@ accum_steps: [0]
 # Optimization
 optim: "adam"
 learning_rate: 0.001
-decay_method: "noam"
-adam_beta2: 0.998
-max_grad_norm: 2
-label_smoothing: 0.1
-param_init: 0
-param_init_glorot: true
-normalization: "sents"
+#decay_method: "noam"
+#adam_beta2: 0.998
+#max_grad_norm: 2
+#label_smoothing: 0.1
+#param_init: 0
+#param_init_glorot: true
+#normalization: "sents"
+
+
+## Attention
+copy_attn: true
+reuse_copy_attn: true
+
 
 # Model
 encoder_type: brnn # Use a bidirectional RNN for the encoder
 decoder_type: rnn # Use an RNN for the decoder
-enc_layers: 1
-dec_layers: 1
-rnn_size: 512 # Size of the RNN hidden state
+enc_layers: 2
+dec_layers: 2
+rnn_size: 256 # Size of the RNN hidden state
 rnn_type: GRU # Type of the RNN. Could be GRU or LSTM
 word_vec_size: 256 # Word embedding size
 attention_type: general # Type of the attention mechanism
