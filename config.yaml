@@ -60,7 +60,7 @@ accum_steps: [0]
 
 # Optimization
 optim: "adam"
-learning_rate: 0.0001
+learning_rate: 0.001
 decay_method: "noam"
 adam_beta2: 0.998
 max_grad_norm: 2
@@ -78,3 +78,6 @@ rnn_size: 512 # Size of the RNN hidden state
 rnn_type: GRU # Type of the RNN. Could be GRU or LSTM
 word_vec_size: 256 # Word embedding size
 attention_type: general # Type of the attention mechanism
+
+tensorboard: true
+tensorboard_log_dir: "tensorboard"
