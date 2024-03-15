@@ -28,7 +28,7 @@ world_size: 1
 gpu_ranks: [0]
 
 # Filter out source/target longer than n if [filtertoolong] enabled
-src_seq_length: 1000
+src_seq_length: 800
 tgt_seq_length: 100
 
 # Tokenization options
@@ -41,18 +41,21 @@ save_model: models/model.fren
 
 # Training options
 train_steps: 20000
-valid_steps: 1000
+valid_steps: 2000
 # Stop training if it does not imporve after n validations
-early_stopping: 5
-save_checkpoint_steps: 1000
+early_stopping: 3
+save_checkpoint_steps: 2000
 
 
 
 
 # Batching
+bucket_size: 262144
 batch_size: 64   # Tokens per batch, change when CUDA out of memory
 valid_batch_size: 64
 num_workers: 0
+accum_count: [4]
+accum_steps: [0]
 
 # Optimization
 optim: "adam"
@@ -76,9 +79,9 @@ encoder_type: brnn # Use a bidirectional RNN for the encoder
 decoder_type: rnn # Use an RNN for the decoder
 enc_layers: 2
 dec_layers: 2
-rnn_size: 256 # Size of the RNN hidden state
+rnn_size: 128 # Size of the RNN hidden state
 rnn_type: GRU # Type of the RNN. Could be GRU or LSTM
-word_vec_size: 256 # Word embedding size
+word_vec_size: 128 # Word embedding size
 global_attention: general
 
 tensorboard: true
