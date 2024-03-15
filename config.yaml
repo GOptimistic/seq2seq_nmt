@@ -65,8 +65,8 @@ learning_rate: 0.001
 
 
 ## Attention
-copy_attn: true
-reuse_copy_attn: true
+#copy_attn: true
+#reuse_copy_attn: true
 
 
 # Model
@@ -77,6 +77,7 @@ dec_layers: 2
 rnn_size: 256 # Size of the RNN hidden state
 rnn_type: GRU # Type of the RNN. Could be GRU or LSTM
 word_vec_size: 256 # Word embedding size
+global_attention: general
 
 tensorboard: true
 tensorboard_log_dir: tensorboard
