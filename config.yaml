@@ -50,7 +50,7 @@ save_checkpoint_steps: 1000
 
 
 # Batching
-bucket_size: 0
+bucket_size: 1024
 batch_size: 64   # Tokens per batch, change when CUDA out of memory
 valid_batch_size: 64
 num_workers: 0
