@@ -38,7 +38,7 @@ tgt_subword_model: target.model
 
 # Where to save the log file and the output models/checkpoints
 log_file: train_transformer.log
-log_file_level: 20
+log_file_level: "DEBUG"
 verbose: true
 save_model: models_transformer/model.fren
 
