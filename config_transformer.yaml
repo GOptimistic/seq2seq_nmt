@@ -74,16 +74,11 @@ param_init_glorot: true
 normalization: "tokens"
 
 
-## Attention
-#copy_attn: true
-#reuse_copy_attn: true
-
-
 # Model
 encoder_type: transformer
 decoder_type: transformer
 position_encoding: true
-is_causal: false
+self_attn_type: "scaled-dot"
 enc_layers: 6
 dec_layers: 6
 heads: 8
