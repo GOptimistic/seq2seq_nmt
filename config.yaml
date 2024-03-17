@@ -38,6 +38,8 @@ tgt_subword_model: target.model
 
 # Where to save the log file and the output models/checkpoints
 log_file: train.log
+log_file_level: 20
+verbose: true
 save_model: models/model.fren
 
 # Training options
